@@ -1,24 +1,37 @@
 :root {
-	--color-primary: #1d4ed8;
-	--color-text: #111827;
-	--color-background: #ffffff;
-	--color-border-subtle: #d7d7d7;
-	--color-text-muted: #555;
-	--color-input-border: #b8b8b8;
-	--color-border-soft: #e5e5e5;
-	--color-surface: #fafafa;
-	--color-surface-alt: #f6f6f6;
-	--color-surface-row: #fbfbfb;
-	--color-surface-hover: #f3f6fb;
-	--color-error: #b42318;
-	--color-success: #067647;
-	--color-button-bg: #1f2937;
-	--color-button-text: #ffffff;
+	--primary-color: #ff385c;
+	--text-color: #222222;
+	--background-color: #ffffff;
+	--border-color-subtle: #dddddd;
 
 	--space-xs: 0.25rem;
 	--space-sm: 0.5rem;
 	--space-md: 1rem;
 	--space-lg: 1.5rem;
+
+	--font-size-base: 1rem;
+	--font-size-lg: 1.375rem;
+
+	--radius-base: 0.5rem;
+
+	/* Backward-compatible aliases used by existing route styles */
+	--color-primary: var(--primary-color);
+	--color-text: var(--text-color);
+	--color-background: var(--background-color);
+	--color-border-subtle: var(--border-color-subtle);
+	--color-text-muted: #6a6a6a;
+	--color-input-border: #c1c1c1;
+	--color-border-soft: #ebebeb;
+	--color-surface: #f7f7f7;
+	--color-surface-alt: #f2f2f2;
+	--color-surface-row: #ffffff;
+	--color-surface-hover: #f2f2f2;
+	--color-error: #c13515;
+	--color-success: #067647;
+	--color-button-bg: var(--primary-color);
+	--color-button-bg-active: #e00b41;
+	--color-button-text: #ffffff;
+
 	--space-form-gap: 0.75rem;
 	--space-label-gap: 0.35rem;
 	--space-page-y: 3rem;
@@ -31,13 +44,19 @@
 	--space-panel-pad-y: 0.85rem;
 	--space-btn-y-alt: 0.9rem;
 
-	--font-size-base: 1rem;
-	--font-size-lg: 1.125rem;
 	--font-size-sm: 0.85rem;
 	--font-size-table: 0.95rem;
-	--font-family-base: 'Playwrite GB J', system-ui, -apple-system, 'Segoe UI', sans-serif;
+	--font-family-base:
+		'Airbnb Cereal VF', Circular, -apple-system, system-ui, Roboto, 'Helvetica Neue', sans-serif;
 
-	--radius: 0.375rem;
+	--radius-none: 0;
+	--radius-xs: 0.25rem;
+	--radius-sm: var(--radius-base);
+	--radius-md: 0.875rem;
+	--radius-lg: 1.25rem;
+	--radius-xl: 2rem;
+	--radius-full: 9999px;
+	--radius: var(--radius-sm);
 
 	--layout-form-sm: 34rem;
 	--layout-form-md: 36rem;
@@ -58,6 +77,7 @@ body {
 	color: var(--color-text);
 	background: var(--color-background);
 	font-size: var(--font-size-base);
+	line-height: 1.5;
 	font-family: var(--font-family-base);
 }
 

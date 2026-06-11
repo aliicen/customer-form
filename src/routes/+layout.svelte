@@ -6,12 +6,6 @@
 </script>
 
 <svelte:head>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Playwrite+GB+J:wght@100..400&display=swap"
-		rel="stylesheet"
-	/>
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
