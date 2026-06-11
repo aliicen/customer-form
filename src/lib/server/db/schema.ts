@@ -1,4 +1,4 @@
-import { pgTable, serial, integer, text } from 'drizzle-orm/pg-core';
+import { pgTable, serial, integer, text, timestamp } from 'drizzle-orm/pg-core';
 
 export const task = pgTable('task', {
 	id: serial('id').primaryKey(),
@@ -6,4 +6,12 @@ export const task = pgTable('task', {
 	priority: integer('priority').notNull().default(1)
 });
 
-export *  from './auth.schema';
+export const customerRegistration = pgTable('customer_registration', {
+	id: serial('id').primaryKey(),
+	name: text('name').notNull(),
+	email: text('email').notNull(),
+	country: text('country').notNull(),
+	createdAt: timestamp('created_at').notNull().defaultNow()
+});
+
+export * from './auth.schema';

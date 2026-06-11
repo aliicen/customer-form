@@ -4,11 +4,25 @@ import type { PageServerLoad } from './$types';
 import { auth } from '$lib/server/auth';
 import { APIError } from 'better-auth/api';
 
-export const load: PageServerLoad = (event) => {
-	if (event.locals.user) {
-		return redirect(302, '/demo/better-auth');
+const defaultRedirectTo = '/admin/submissions';
+
+const getSafeRedirectTo = (value: FormDataEntryValue | string | null) => {
+	const redirectTo = value?.toString() ?? '';
+
+	if (redirectTo === '/admin/submissions' || redirectTo.startsWith('/admin/')) {
+		return redirectTo;
 	}
-	return {};
+
+	return defaultRedirectTo;
+};
+
+export const load: PageServerLoad = (event) => {
+	const redirectTo = getSafeRedirectTo(event.url.searchParams.get('redirect'));
+
+	if (event.locals.user) {
+		return redirect(302, redirectTo);
+	}
+	return { redirectTo };
 };
 
 export const actions: Actions = {
@@ -16,6 +30,9 @@ export const actions: Actions = {
 		const formData = await event.request.formData();
 		const email = formData.get('email')?.toString() ?? '';
 		const password = formData.get('password')?.toString() ?? '';
+		const redirectTo = getSafeRedirectTo(
+			formData.get('redirectTo') ?? event.url.searchParams.get('redirect')
+		);
 
 		try {
 			await auth.api.signInEmail({
@@ -32,13 +49,16 @@ export const actions: Actions = {
 			return fail(500, { message: 'Unexpected error' });
 		}
 
-		return redirect(302, '/demo/better-auth');
+		return redirect(302, redirectTo);
 	},
 	signUpEmail: async (event) => {
 		const formData = await event.request.formData();
 		const email = formData.get('email')?.toString() ?? '';
 		const password = formData.get('password')?.toString() ?? '';
 		const name = formData.get('name')?.toString() ?? '';
+		const redirectTo = getSafeRedirectTo(
+			formData.get('redirectTo') ?? event.url.searchParams.get('redirect')
+		);
 
 		try {
 			await auth.api.signUpEmail({
@@ -56,6 +76,6 @@ export const actions: Actions = {
 			return fail(500, { message: 'Unexpected error' });
 		}
 
-		return redirect(302, '/demo/better-auth');
-	},
+		return redirect(302, redirectTo);
+	}
 };
