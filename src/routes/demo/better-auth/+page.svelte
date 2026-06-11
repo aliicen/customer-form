@@ -29,18 +29,18 @@
 
 <style>
 	main {
-		max-width: 64rem;
-		margin: 3rem auto;
-		padding: 0 1rem;
-		font-family: sans-serif;
+		max-width: var(--layout-content-lg);
+		margin: var(--space-page-y) auto;
+		padding: 0 var(--space-md);
+		font-family: var(--font-family-base);
 	}
 
 	header {
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
-		gap: 1rem;
-		margin-bottom: 1.5rem;
+		gap: var(--space-md);
+		margin-bottom: var(--space-lg);
 	}
 
 	h1,
@@ -49,23 +49,23 @@
 	}
 
 	header p {
-		margin-bottom: 0.35rem;
-		color: #555;
+		margin-bottom: var(--space-label-gap);
+		color: var(--color-text-muted);
 	}
 
 	.back-link {
 		display: inline-block;
-		margin-bottom: 1rem;
-		color: #1d4ed8;
+		margin-bottom: var(--space-md);
+		color: var(--color-primary);
 		font-weight: 700;
 	}
 
 	button {
-		padding: 0.6rem 0.9rem;
+		padding: var(--space-input-y) var(--space-btn-y-alt);
 		border: 0;
-		border-radius: 4px;
-		background: #1f2937;
-		color: white;
+		border-radius: var(--radius);
+		background: var(--color-button-bg);
+		color: var(--color-button-text);
 		font: inherit;
 		font-weight: 600;
 		cursor: pointer;
@@ -73,12 +73,12 @@
 
 	section {
 		display: grid;
-		gap: 0.75rem;
-		margin-top: 1rem;
-		border: 1px solid #d7d7d7;
-		border-radius: 6px;
-		padding: 1rem;
-		background: #fafafa;
+		gap: var(--space-form-gap);
+		margin-top: var(--space-md);
+		border: 1px solid var(--color-border-subtle);
+		border-radius: var(--radius);
+		padding: var(--space-md);
+		background: var(--color-surface);
 	}
 
 	h2 {
@@ -86,7 +86,7 @@
 	}
 
 	a {
-		color: #1d4ed8;
+		color: var(--color-primary);
 		font-weight: 700;
 	}
 </style>

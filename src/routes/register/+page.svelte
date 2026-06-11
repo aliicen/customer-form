@@ -64,32 +64,32 @@
 
 <style>
 	main {
-		max-width: 36rem;
-		margin: 3rem auto;
-		padding: 0 1rem;
-		font-family: sans-serif;
+		max-width: var(--layout-form-md);
+		margin: var(--space-page-y) auto;
+		padding: 0 var(--space-md);
+		font-family: var(--font-family-base);
 	}
 
 	section {
 		display: grid;
-		gap: 1rem;
+		gap: var(--space-md);
 	}
 
 	.back-link {
 		display: inline-block;
-		margin-bottom: 1rem;
-		color: #1d4ed8;
+		margin-bottom: var(--space-md);
+		color: var(--color-primary);
 		font-weight: 700;
 	}
 
 	form {
 		display: grid;
-		gap: 0.75rem;
+		gap: var(--space-form-gap);
 	}
 
 	label {
 		display: grid;
-		gap: 0.35rem;
+		gap: var(--space-label-gap);
 		font-weight: 600;
 	}
 
@@ -97,36 +97,36 @@
 	select {
 		width: 100%;
 		box-sizing: border-box;
-		padding: 0.6rem;
-		border: 1px solid #b8b8b8;
-		border-radius: 4px;
+		padding: var(--space-input-y);
+		border: 1px solid var(--color-input-border);
+		border-radius: var(--radius);
 		font: inherit;
 	}
 
 	button {
 		width: fit-content;
-		padding: 0.65rem 1rem;
+		padding: var(--space-btn-y) var(--space-btn-x);
 		border: 0;
-		border-radius: 4px;
-		background: #1f2937;
-		color: white;
+		border-radius: var(--radius);
+		background: var(--color-button-bg);
+		color: var(--color-button-text);
 		font: inherit;
 		font-weight: 600;
 		cursor: pointer;
 	}
 
 	.error {
-		margin: -0.4rem 0 0;
-		color: #b42318;
+		margin: calc(var(--space-sm) * -0.8) 0 0;
+		color: var(--color-error);
 	}
 
 	.info {
-		margin: -0.4rem 0 0;
-		color: #555;
+		margin: calc(var(--space-sm) * -0.8) 0 0;
+		color: var(--color-text-muted);
 	}
 
 	.success {
-		color: #067647;
+		color: var(--color-success);
 		font-weight: 600;
 	}
 </style>

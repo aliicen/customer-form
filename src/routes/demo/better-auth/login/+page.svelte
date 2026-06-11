@@ -50,16 +50,16 @@
 
 <style>
 	main {
-		max-width: 34rem;
-		margin: 3rem auto;
-		padding: 0 1rem;
-		font-family: sans-serif;
+		max-width: var(--layout-form-sm);
+		margin: var(--space-page-y) auto;
+		padding: 0 var(--space-md);
+		font-family: var(--font-family-base);
 	}
 
 	section,
 	form {
 		display: grid;
-		gap: 1rem;
+		gap: var(--space-md);
 	}
 
 	h1,
@@ -69,49 +69,49 @@
 
 	.back-link {
 		display: inline-block;
-		margin-bottom: 1rem;
-		color: #1d4ed8;
+		margin-bottom: var(--space-md);
+		color: var(--color-primary);
 		font-weight: 700;
 	}
 
 	label {
 		display: grid;
-		gap: 0.35rem;
+		gap: var(--space-label-gap);
 		font-weight: 700;
 	}
 
 	input {
-		padding: 0.6rem;
-		border: 1px solid #b8b8b8;
-		border-radius: 4px;
+		padding: var(--space-input-y);
+		border: 1px solid var(--color-input-border);
+		border-radius: var(--radius);
 		font: inherit;
 	}
 
 	.actions {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.75rem;
+		gap: var(--space-form-gap);
 	}
 
 	button {
-		padding: 0.65rem 1rem;
+		padding: var(--space-btn-y) var(--space-btn-x);
 		border: 0;
-		border-radius: 4px;
-		background: #1f2937;
-		color: white;
+		border-radius: var(--radius);
+		background: var(--color-button-bg);
+		color: var(--color-button-text);
 		font: inherit;
 		font-weight: 700;
 		cursor: pointer;
 	}
 
 	button[formaction] {
-		border: 1px solid #1f2937;
-		background: white;
-		color: #1f2937;
+		border: 1px solid var(--color-button-bg);
+		background: var(--color-background);
+		color: var(--color-button-bg);
 	}
 
 	.error {
-		color: #b42318;
+		color: var(--color-error);
 		font-weight: 700;
 	}
 </style>

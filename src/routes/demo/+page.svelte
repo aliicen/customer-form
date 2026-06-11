@@ -10,15 +10,15 @@
 <style>
 	main {
 		display: flex;
-		gap: 1rem;
-		max-width: 36rem;
-		margin: 3rem auto;
-		padding: 0 1rem;
-		font-family: sans-serif;
+		gap: var(--space-md);
+		max-width: var(--layout-form-md);
+		margin: var(--space-page-y) auto;
+		padding: 0 var(--space-md);
+		font-family: var(--font-family-base);
 	}
 
 	a {
-		color: #1d4ed8;
+		color: var(--color-primary);
 		font-weight: 700;
 	}
 </style>

@@ -15,20 +15,20 @@
 
 <style>
 	main {
-		max-width: 36rem;
-		margin: 3rem auto;
-		padding: 0 1rem;
-		font-family: sans-serif;
+		max-width: var(--layout-form-md);
+		margin: var(--space-page-y) auto;
+		padding: 0 var(--space-md);
+		font-family: var(--font-family-base);
 	}
 
 	nav {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.75rem;
-		margin-top: 1.5rem;
+		gap: var(--space-form-gap);
+		margin-top: var(--space-lg);
 	}
 
 	a {
-		color: #1d4ed8;
+		color: var(--color-primary);
 	}
 </style>

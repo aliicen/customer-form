@@ -1,0 +1,66 @@
+:root {
+	--color-primary: #1d4ed8;
+	--color-text: #111827;
+	--color-background: #ffffff;
+	--color-border-subtle: #d7d7d7;
+	--color-text-muted: #555;
+	--color-input-border: #b8b8b8;
+	--color-border-soft: #e5e5e5;
+	--color-surface: #fafafa;
+	--color-surface-alt: #f6f6f6;
+	--color-surface-row: #fbfbfb;
+	--color-surface-hover: #f3f6fb;
+	--color-error: #b42318;
+	--color-success: #067647;
+	--color-button-bg: #1f2937;
+	--color-button-text: #ffffff;
+
+	--space-xs: 0.25rem;
+	--space-sm: 0.5rem;
+	--space-md: 1rem;
+	--space-lg: 1.5rem;
+	--space-form-gap: 0.75rem;
+	--space-label-gap: 0.35rem;
+	--space-page-y: 3rem;
+	--space-input-y: 0.6rem;
+	--space-input-x: 0.65rem;
+	--space-btn-y: 0.65rem;
+	--space-btn-x: 1rem;
+	--space-btn-y-sm: 0.55rem;
+	--space-btn-x-sm: 0.8rem;
+	--space-panel-pad-y: 0.85rem;
+	--space-btn-y-alt: 0.9rem;
+
+	--font-size-base: 1rem;
+	--font-size-lg: 1.125rem;
+	--font-size-sm: 0.85rem;
+	--font-size-table: 0.95rem;
+	--font-family-base: 'Playwrite GB J', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+	--radius: 0.375rem;
+
+	--layout-form-sm: 34rem;
+	--layout-form-md: 36rem;
+	--layout-content-lg: 64rem;
+	--layout-content-xl: 72rem;
+	--layout-input-min: 20rem;
+	--breakpoint-md: 720px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	color: var(--color-text);
+	background: var(--color-background);
+	font-size: var(--font-size-base);
+	font-family: var(--font-family-base);
+}
+
+a {
+	color: var(--color-primary);
+}
